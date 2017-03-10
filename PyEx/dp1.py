@@ -1,3 +1,6 @@
+//This program is to demonstrate the dynamic programming example problem from Algorithms by Corman,etc. 
+//This is only half written and probably incorrect, will look into this later.
+
 e=raw_input("entry time for lines")
 """e2=raw_input(print "entry time for line 2")"""
 n=raw_input("number of stations")
