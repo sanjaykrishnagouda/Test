@@ -1,3 +1,6 @@
+/* program implementing a slightly modified version of Eulers method to find GCD of two numbers */
+
+
 #include<stdio.h>
 int gcd(int u,int v)
 {
