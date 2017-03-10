@@ -1,3 +1,5 @@
+/*program to delete next node of any arbitrary node from a linked list*/
+
 #include<stdio.h>
 #include<stdlib.h>
 main(){
@@ -9,7 +11,7 @@ head=(struct node *) malloc(sizeof *head);
 z=(struct node *) malloc(sizeof *z);
 head->next=z;z->next=z;
 }
-deletenext(struct node *t){
+deletenext(struct node *t){  /*easy peasy lemon squeazy*/
 t->next=t->next->next;
 }
 struct node *insertafter(int v, struct node *t)
