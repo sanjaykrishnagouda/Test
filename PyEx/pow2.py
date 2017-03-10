@@ -25,3 +25,5 @@ sol=Solution()
 n=int(raw_input("enter a number:"))
 re=sol.fn(n)
 print re
+
+
