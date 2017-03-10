@@ -1,17 +1,17 @@
-/*program to detect loop */
+/*program to detect loop in a linked list*/
 #include<stdio.h>
 #include<stdlib.h>
 struct node{
     int data;
     struct node* next;
 };
-void push(struct node** head_ref,int new_data){
+void push(struct node** head_ref,int new_data){   /* utility function to create a linked list*/
     struct node* new_node=(struct node*)malloc(sizeof(struct node));
     new_node->data=new_data;
     new_node->next=(*head_ref);
     (*head_ref)=new_node;
     }
-void pL(struct node *node){
+void pL(struct node *node){  /* utility function to print linked list in a->b->c format */
     while(node->next!=NULL){
         printf("%d->",node->data);
         node=node->next;
@@ -19,8 +19,8 @@ void pL(struct node *node){
             printf("%d \n",node->data);
         }
     }
-int detectLoop(struct node *list){
-    struct node *fast_p=list, *slow_p=list;
+int detectLoop(struct node *list){  /* main logic */
+    struct node *fast_p=list, *slow_p=list;  /*two pointers, increasing in different ways*/
     while(fast_p&&slow_p&&fast_p->next){
         slow_p=slow_p->next;
         fast_p=fast_p->next->next;
@@ -31,7 +31,7 @@ int detectLoop(struct node *list){
         }
     return 0;
     }
-int main(){
+int main(){  /*driver function */
     struct node *head=NULL;
     int k=10;
     for(k=10;k>=0;k--){
