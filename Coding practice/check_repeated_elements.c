@@ -1,3 +1,5 @@
+//PROGRAM TO CHECK REPEATED ELEMENTS IN A SORTED ARRAY
+
 #include<stdio.h>
 #include<stdlib.h>
 void pR(int arr[],int size){
